@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Započni pregled - Medicinski Portal</title>
+    <link rel="stylesheet" href="../css/medical-staff-styles.css">
+    <link rel="stylesheet" href="../css/zapocni-pregled.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 120 120" fill="none">
+                    <path
+                        d="M60 100 C60 100 20 75 20 50 C20 35 30 25 42 25 C50 25 57 30 60 37 C63 30 70 25 78 25 C90 25 100 35 100 50 C100 75 60 100 60 100 Z"
+                        fill="#E63946" />
+                    <rect x="54" y="40" width="12" height="35" fill="white" rx="2" />
+                    <rect x="42.5" y="51.5" width="35" height="12" fill="white" rx="2" />
+                </svg>
+                <h1>PametneZdravstveneUstanove-KS</h1>
+            </div>
+            <nav class="nav">
+                <a href="medical-staff-interface.html" class="nav-link">Nadzorna ploča</a>
+                <a href="#" class="nav-link">Pacijenti</a>
+                <a href="#" class="nav-link active">Pregledi</a>
+                <a href="#" class="nav-link">Izvještaji</a>
+            </nav>
+            <div class="user-info">
+                <div class="notifications">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                    </svg>
+                    <span class="badge">2</span>
+                </div>
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                    </div>
+                    <div class="user-details">
+                        <span class="user-name">Dr. Amina Hadžić</span>
+                        <span class="user-role">Kardiolog</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>Brzi pristup</h3>
+                <ul class="menu">
+                    <li class="menu-item active">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2 2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                        </svg>
+                        Započni pregled
+                    </li>
+                    <li class="menu-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                            <line x1="16" y1="2" x2="16" y2="6" />
+                            <line x1="8" y1="2" x2="8" y2="6" />
+                            <line x1="3" y1="10" x2="21" y2="10" />
+                        </svg>
+                        Termini
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h3>Statistika</h3>
+                <div class="stats-card">
+                    <div class="stat-item">
+                        <span class="stat-label">Pregledi</span>
+                        <span class="stat-value">12/15</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Hitno</span>
+                        <span class="stat-value">2</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="content-area">
+            <section class="section">
+                <div class="section-header">
+                    <div>
+                        <h2>Start pregleda</h2>
+                        <p class="sub-text">Sažetak vitalnih znakova i simptoma</p>
+                    </div>
+                    <span class="status-badge active">Pacijent: Emir Softić</span>
+                </div>
+                <div class="compact-grid">
+                    <div class="note-card">
+                        <h4>Vitalni znaci</h4>
+                        <div class="pill-row">
+                            <span class="pill info">BP 145/90</span>
+                            <span class="pill info">Puls 78</span>
+                            <span class="pill info">Temp 36.8</span>
+                        </div>
+                        <p class="sub-text">Blago povišen pritisak, ostalo uredno.</p>
+                    </div>
+                    <div class="note-card">
+                        <h4>Simptomi</h4>
+                        <p class="sub-text">Glavobolja povremeno, umor popodne.</p>
+                    </div>
+                    <div class="note-card">
+                        <h4>Anamneza</h4>
+                        <p class="sub-text">Hipertenzija 5 godina, nema novih intervencija.</p>
+                    </div>
+                    <div class="note-card">
+                        <h4>Plan</h4>
+                        <p class="sub-text">Nastaviti terapiju, kontrolisati pritisak 2x dnevno.</p>
+                        <div class="pill-row">
+                            <span class="pill success">Napomena sacuvana</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-header">
+                    <h2>Radnje</h2>
+                    <div class="action-row">
+                        <button class="btn btn-outline btn-sm">Otkaži</button>
+                        <button class="btn btn-success btn-sm">Započni</button>
+                    </div>
+                </div>
+                <div class="pill-row">
+                    <span class="pill warning">Provjeri alergije</span>
+                    <span class="pill info">Laboratorija pregledana</span>
+                    <span class="pill success">Spremno za pregled</span>
+                </div>
+
+                <div class="section-header top-gap">
+                    <h2>Dnevni zadaci</h2>
+                    <span class="status-badge monitoring">Vrijeme: 14:10</span>
+                </div>
+                <div class="two-grid">
+                    <div class="note-card">
+                        <h4>Kontrolna lista prije pregleda</h4>
+                        <ul class="checklist">
+                            <li><span class="badge-soft success">✔</span> Vitalni znaci uneseni</li>
+                            <li><span class="badge-soft warning">!</span> Potvrdi alergije</li>
+                            <li><span class="badge-soft info">i</span> Pregledaj ranije nalaze</li>
+                        </ul>
+                    </div>
+                    <div class="note-card">
+                        <h4>Brzi formular</h4>
+                        <div class="input-stack">
+                            <label>Simptom dana</label>
+                            <input class="input-control" type="text" placeholder="npr. vrtoglavica">
+                        </div>
+                        <div class="input-stack">
+                            <label>Napomena</label>
+                            <textarea class="note-area" rows="2" placeholder="Kratka bilješka za tim"></textarea>
+                        </div>
+                        <div class="action-row">
+                            <button class="btn btn-outline btn-sm">Sačuvaj</button>
+                            <button class="btn btn-primary btn-sm">Dodaj u karton</button>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+
+        <aside class="right-sidebar">
+            <div class="widget ai-analiza">
+                <h3>AI Analiza</h3>
+                <div class="ai-analiza-card">
+                    <div class="ai-analiza-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2 2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <p>Predložene sekcije već popunjene iz prethodnih nalaza.</p>
+                    <button class="btn btn-primary btn-wide">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.35-4.35" />
+                        </svg>
+                        Otvori nacrt
+                    </button>
+                </div>
+            </div>
+            <div class="widget">
+                <h3>Brzi vodič</h3>
+                <div class="mini-list">
+                    <span>1. Vitalni znaci</span>
+                    <span>2. Simptomi</span>
+                    <span>3. Terapija</span>
+                </div>
+            </div>
+            <div class="widget">
+                <h3>Brze radnje</h3>
+                <div class="quick-actions">
+                    <button class="quick-action-btn">Otvori karton</button>
+                    <button class="quick-action-btn">Pogledaj AI</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+</body>
+
+</html>

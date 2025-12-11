@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicinski Portal - Osoblje</title>
+    <link rel="stylesheet" href="../css/medical-staff-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 120 120" fill="none">
+                    <!-- Heart shape -->
+                    <path d="M60 100 C60 100 20 75 20 50 C20 35 30 25 42 25 C50 25 57 30 60 37 C63 30 70 25 78 25 C90 25 100 35 100 50 C100 75 60 100 60 100 Z" 
+                          fill="#E63946" stroke="none"/>
+                    
+                    <!-- White cross on heart -->
+                    <rect x="54" y="40" width="12" height="35" fill="white" rx="2"/>
+                    <rect x="42.5" y="51.5" width="35" height="12" fill="white" rx="2"/>
+                    
+                    <!-- Left hand (light skin tone) -->
+                    <path d="M30 70 Q25 73 22 78 L18 82 Q15 85 17 88 Q19 91 22 88 L28 82 Q32 78 35 75 L38 72 Q40 70 38 68 Q36 66 34 68 Z" 
+                          fill="#F4C4A7" stroke="#E0A080" stroke-width="1"/>
+                    <ellipse cx="25" cy="75" rx="3" ry="4" fill="#F4C4A7"/>
+                    
+                    <!-- Right hand (light skin tone) -->
+                    <path d="M90 70 Q95 73 98 78 L102 82 Q105 85 103 88 Q101 91 98 88 L92 82 Q88 78 85 75 L82 72 Q80 70 82 68 Q84 66 86 68 Z" 
+                          fill="#F4C4A7" stroke="#E0A080" stroke-width="1"/>
+                    <ellipse cx="95" cy="75" rx="3" ry="4" fill="#F4C4A7"/>
+                    
+                    <!-- Fingers details -->
+                    <path d="M20 80 Q18 82 18 84" stroke="#E0A080" stroke-width="0.8" fill="none"/>
+                    <path d="M100 80 Q102 82 102 84" stroke="#E0A080" stroke-width="0.8" fill="none"/>
+                </svg>
+                <h1>PametneZdravstveneUstanove-KS</h1>
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav-link active">Nadzorna ploča</a>
+                <a href="#" class="nav-link">Pacijenti</a>
+                <a href="#" class="nav-link">Zakazivanja</a>
+                <a href="#" class="nav-link">Izvještaji</a>
+            </nav>
+            <div class="user-info">
+                <div class="notifications">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                    </svg>
+                    <span class="badge">3</span>
+                </div>
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <div class="user-details">
+                        <span class="user-name">Dr. Amina Hadžić</span>
+                        <span class="user-role">Kardiolog</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>Brzi pristup</h3>
+                <ul class="menu">
+                    <li class="menu-item active">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"/>
+                            <rect x="14" y="3" width="7" height="7"/>
+                            <rect x="14" y="14" width="7" height="7"/>
+                            <rect x="3" y="14" width="7" height="7"/>
+                        </svg>
+                        Nadzorna ploča
+                    </li>
+                    <li class="menu-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        Svi pacijenti
+                    </li>
+                    <li class="menu-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        Današnji termini
+                    </li>
+                    <li class="menu-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                        Medicinska dokumentacija
+                    </li>
+                    <li class="menu-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                        Recept
+                    </li>
+                    <li class="menu-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 11l3 3L22 4"/>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                        </svg>
+                        Laboratorijski nalazi
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h3>Statistika</h3>
+                <div class="stats-card">
+                    <div class="stat-item">
+                        <span class="stat-label">Današnji pregledi</span>
+                        <span class="stat-value">12/15</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Na čekanju</span>
+                        <span class="stat-value">3</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <h3>AI Analiza</h3>
+                <div class="ai-card">
+                    <div class="ai-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <p class="ai-text">Analiza trendova pacijenata i preporuke za optimizaciju rasporeda</p>
+                    <button class="ai-btn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.35-4.35"/>
+                        </svg>
+                        Pogledaj preporuke
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            <!-- Stats Cards -->
+            <section class="stats-grid">
+                <div class="stat-card blue">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Ukupno pacijenata</h3>
+                        <p class="stat-number">1,247</p>
+                        <span class="stat-change positive">+12% od prošlog mjeseca</span>
+                    </div>
+                </div>
+
+                <div class="stat-card green">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Aktivni tretmani</h3>
+                        <p class="stat-number">86</p>
+                        <span class="stat-change positive">+5% ove sedmice</span>
+                    </div>
+                </div>
+
+                <div class="stat-card orange">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Čekaju pregled</h3>
+                        <p class="stat-number">15</p>
+                        <span class="stat-change neutral">Sljedeći: 14:30</span>
+                    </div>
+                </div>
+
+                <div class="stat-card red">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="8" x2="12" y2="12"/>
+                            <line x1="12" y1="16" x2="12.01" y2="16"/>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Hitni slučajevi</h3>
+                        <p class="stat-number">2</p>
+                        <span class="stat-change negative">Zahtijeva pažnju</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Današnji termini -->
+            <section class="section">
+                <div class="section-header">
+                    <h2>Današnji termini</h2>
+                    <button class="btn btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"/>
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                        </svg>
+                        Novi termin
+                    </button>
+                </div>
+                <div class="appointments-list">
+                    <div class="appointment-card urgent">
+                        <div class="appointment-time">
+                            <span class="time">14:30</span>
+                            <span class="duration">45 min</span>
+                        </div>
+                        <div class="appointment-info">
+                            <h4>Emir Softić</h4>
+                            <p>Kontrolni pregled - Kardiologija</p>
+                            <div class="tags">
+                                <span class="tag urgent">Hitno</span>
+                                <span class="tag">Redovni pacijent</span>
+                            </div>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="btn btn-icon" title="Pregledaj profil">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </button>
+                            <button class="btn btn-success">Započni pregled</button>
+                        </div>
+                    </div>
+
+                    <div class="appointment-card">
+                        <div class="appointment-time">
+                            <span class="time">15:15</span>
+                            <span class="duration">30 min</span>
+                        </div>
+                        <div class="appointment-info">
+                            <h4>Lejla Begović</h4>
+                            <p>Prvi pregled - Opća medicina</p>
+                            <div class="tags">
+                                <span class="tag">Novi pacijent</span>
+                            </div>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="btn btn-icon" title="Pregledaj profil">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </button>
+                            <button class="btn btn-outline">Pripremi</button>
+                        </div>
+                    </div>
+
+                    <div class="appointment-card">
+                        <div class="appointment-time">
+                            <span class="time">15:45</span>
+                            <span class="duration">30 min</span>
+                        </div>
+                        <div class="appointment-info">
+                            <h4>Haris Mulić</h4>
+                            <p>Pregled rezultata - Laboratorija</p>
+                            <div class="tags">
+                                <span class="tag">Rezultati spremni</span>
+                            </div>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="btn btn-icon" title="Pregledaj profil">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </button>
+                            <button class="btn btn-outline">Pripremi</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Nedavni pacijenti -->
+            <section class="section">
+                <div class="section-header">
+                    <h2>Nedavni pacijenti</h2>
+                    <a href="#" class="link">Vidi sve →</a>
+                </div>
+                <div class="table-container">
+                    <table class="patients-table">
+                        <thead>
+                            <tr>
+                                <th>Ime i prezime</th>
+                                <th>MBO</th>
+                                <th>Zadnji pregled</th>
+                                <th>Dijagnoza</th>
+                                <th>Status</th>
+                                <th>Akcije</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <div class="patient-avatar">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                                <circle cx="12" cy="7" r="4"/>
+                                            </svg>
+                                        </div>
+                                        <span>Fatima Resulović</span>
+                                    </div>
+                                </td>
+                                <td>12345678</td>
+                                <td>08.12.2025</td>
+                                <td>Hipertenzija</td>
+                                <td><span class="status-badge active">Aktivno liječenje</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline">Otvori karton</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <div class="patient-avatar">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                                <circle cx="12" cy="7" r="4"/>
+                                            </svg>
+                                        </div>
+                                        <span>Adem Osmanović</span>
+                                    </div>
+                                </td>
+                                <td>23456789</td>
+                                <td>07.12.2025</td>
+                                <td>Dijabetes tip 2</td>
+                                <td><span class="status-badge monitoring">Praćenje</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline">Otvori karton</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <div class="patient-avatar">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                                <circle cx="12" cy="7" r="4"/>
+                                            </svg>
+                                        </div>
+                                        <span>Selma Čaušević</span>
+                                    </div>
+                                </td>
+                                <td>34567890</td>
+                                <td>05.12.2025</td>
+                                <td>Bronhitis</td>
+                                <td><span class="status-badge recovered">Oporavljen</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline">Otvori karton</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <div class="patient-avatar">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                                <circle cx="12" cy="7" r="4"/>
+                                            </svg>
+                                        </div>
+                                        <span>Kemal Hasanović</span>
+                                    </div>
+                                </td>
+                                <td>45678901</td>
+                                <td>04.12.2025</td>
+                                <td>Migrena</td>
+                                <td><span class="status-badge active">Aktivno liječenje</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline">Otvori karton</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <!-- Obavijesti -->
+            <div class="widget">
+                <h3>Obavijesti</h3>
+                <div class="notifications-list">
+                    <div class="notification-item urgent">
+                        <div class="notification-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12" stroke="white" stroke-width="2"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="notification-content">
+                            <p><strong>Hitni slučaj</strong></p>
+                            <p>Novi hitni pacijent u prijavnici</p>
+                            <span class="time">Prije 5 min</span>
+                        </div>
+                    </div>
+                    <div class="notification-item">
+                        <div class="notification-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            </svg>
+                        </div>
+                        <div class="notification-content">
+                            <p><strong>Rezultati gotovi</strong></p>
+                            <p>Laboratorijski rezultati za H. Mulić</p>
+                            <span class="time">Prije 15 min</span>
+                        </div>
+                    </div>
+                    <div class="notification-item">
+                        <div class="notification-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            </svg>
+                        </div>
+                        <div class="notification-content">
+                            <p><strong>Podsjetnik</strong></p>
+                            <p>Tim sastanak u 16:00</p>
+                            <span class="time">Prije 1h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brzi unos -->
+            <div class="widget">
+                <h3>Brzi unos</h3>
+                <div class="quick-actions">
+                    <button class="quick-action-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="8.5" cy="7" r="4"/>
+                            <line x1="20" y1="8" x2="20" y2="14"/>
+                            <line x1="23" y1="11" x2="17" y2="11"/>
+                        </svg>
+                        Novi pacijent
+                    </button>
+                    <button class="quick-action-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                        Ispiši recept
+                    </button>
+                    <button class="quick-action-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                        </svg>
+                        Novi izvještaj
+                    </button>
+                </div>
+            </div>
+
+            <!-- Moj raspored -->
+            <div class="widget">
+                <h3>Moj raspored</h3>
+                <div class="schedule">
+                    <div class="schedule-day">
+                        <span class="day">Danas</span>
+                        <span class="hours">08:00 - 16:00</span>
+                    </div>
+                    <div class="schedule-items">
+                        <div class="schedule-item">
+                            <span class="dot blue"></span>
+                            <span>Ambulanta: 08:00-12:00</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="dot green"></span>
+                            <span>Konzultacije: 13:00-15:00</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="dot orange"></span>
+                            <span>Tim sastanak: 16:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>

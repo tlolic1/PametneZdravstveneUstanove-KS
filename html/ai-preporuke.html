@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI preporuke - Medicinski Portal</title>
+    <link rel="stylesheet" href="../css/medical-staff-styles.css">
+    <link rel="stylesheet" href="../css/ai-preporuke.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 120 120" fill="none">
+                    <path
+                        d="M60 100 C60 100 20 75 20 50 C20 35 30 25 42 25 C50 25 57 30 60 37 C63 30 70 25 78 25 C90 25 100 35 100 50 C100 75 60 100 60 100 Z"
+                        fill="#E63946" />
+                    <rect x="54" y="40" width="12" height="35" fill="white" rx="2" />
+                    <rect x="42.5" y="51.5" width="35" height="12" fill="white" rx="2" />
+                </svg>
+                <h1>PametneZdravstveneUstanove-KS</h1>
+            </div>
+            <nav class="nav">
+                <a href="medical-staff-interface.html" class="nav-link">Nadzorna ploča</a>
+                <a href="#" class="nav-link">Pacijenti</a>
+                <a href="#" class="nav-link">Zakazivanja</a>
+                <a href="#" class="nav-link active">AI Analiza</a>
+            </nav>
+            <div class="user-info">
+                <div class="notifications">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                    </svg>
+                    <span class="badge">2</span>
+                </div>
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                    </div>
+                    <div class="user-details">
+                        <span class="user-name amina-hadzic">Dr. Amina Hadžić</span>
+                        <span class="user-role">Kardiolog</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>Brzi pristup</h3>
+                <ul class="menu">
+                    <li class="menu-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7" />
+                            <rect x="14" y="3" width="7" height="7" />
+                            <rect x="14" y="14" width="7" height="7" />
+                            <rect x="3" y="14" width="7" height="7" />
+                        </svg>
+                        Nadzorna ploča
+                    </li>
+                    <li class="menu-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                        Pacijenti
+                    </li>
+                    <li class="menu-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23" />
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                        Recepti
+                    </li>
+                    <li class="menu-item active">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                        AI preporuke
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h3>Statistika</h3>
+                <div class="stats-card">
+                    <div class="stat-item">
+                        <span class="stat-label">Analize</span>
+                        <span class="stat-value">3</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">U toku</span>
+                        <span class="stat-value">1</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="content-area">
+            <section class="section">
+                <div class="section-header">
+                    <div>
+                        <h2>AI sažetak pacijenta</h2>
+                        <p class="sub-text">Pacijent: Emir Softić | MBO: 12345678</p>
+                    </div>
+                    <span class="status-badge monitoring">Model: MedAI v3.2</span>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card red">
+                        <div class="stat-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <h3>CV rizik</h3>
+                            <p class="stat-number">Visok</p>
+                            <span class="stat-change negative">75% potreban nadzor</span>
+                        </div>
+                    </div>
+                    <div class="stat-card orange">
+                        <div class="stat-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Dijabetes</h3>
+                            <p class="stat-number">Umjeren</p>
+                            <span class="stat-change neutral">HbA1c 5.9%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card green">
+                        <div class="stat-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <h3>LDL trend</h3>
+                            <p class="stat-number">-5%</p>
+                            <span class="stat-change positive">Napredak</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-header">
+                    <h2>Preporučene akcije</h2>
+                    <span class="status-badge active">3 prijedloga</span>
+                </div>
+                <div class="recommend-grid">
+                    <div class="note-card">
+                        <div class="card-tag danger">Visok prioritet</div>
+                        <h4>Prilagoditi terapiju pritiska</h4>
+                        <p class="sub-text">Dodati ACE inhibitor ili pojačati dozu; cilj 130/80.</p>
+                    </div>
+                    <div class="note-card">
+                        <div class="card-tag warning">Srednji</div>
+                        <h4>OGTT zakazati</h4>
+                        <p class="sub-text">Granične vrijednosti glukoze, kontrola za 3 mjeseca.</p>
+                    </div>
+                    <div class="note-card">
+                        <div class="card-tag info">Nizak</div>
+                        <h4>Program aktivnosti</h4>
+                        <p class="sub-text">Brze šetnje 30 min dnevno, praćenje BMI.</p>
+                    </div>
+                </div>
+                <div class="section-header top-gap">
+                    <h2>Trendovi u 90 dana</h2>
+                    <span class="stat-change neutral">Sažetak bez grafova</span>
+                </div>
+                <div class="compact-grid">
+                    <div class="note-card">
+                        <h4>Krvni pritisak</h4>
+                        <p class="sub-text">Prosjek 145/90, blagi rast zadnje sedmice.</p>
+                        <div class="pill-row">
+                            <span class="pill warning">pojačati nadzor</span>
+                        </div>
+                    </div>
+                    <div class="note-card">
+                        <h4>Glukoza</h4>
+                        <p class="sub-text">Stabilna, OGTT čekanje.</p>
+                        <div class="pill-row">
+                            <span class="pill info">Plan OGTT</span>
+                        </div>
+                    </div>
+                    <div class="note-card">
+                        <h4>LDL</h4>
+                        <p class="sub-text">Trend pada nakon statina.</p>
+                        <div class="pill-row">
+                            <span class="pill success">Napredak</span>
+                        </div>
+                    </div>
+                    <div class="note-card">
+                        <h4>BMI</h4>
+                        <p class="sub-text">28.5 -> 28.0, plan -0.5 mjesečno.</p>
+                    </div>
+                </div>
+                <div class="section-header top-gap">
+                    <h2>AI chat</h2>
+                    <span class="status-badge monitoring">Na mreži</span>
+                </div>
+                <div class="chat-grid">
+                    <div class="note-card">
+                        <h4>Brza pitanja</h4>
+                        <p class="sub-text"><strong>Doktor:</strong> Da li je terapija adekvatna?</p>
+                        <p class="sub-text"><strong>AI:</strong> Da, ali preporučujem mjerenje tlaka 2x dnevno.</p>
+                    </div>
+                    <div class="note-card">
+                        <div class="input-stack">
+                            <label>Postavi pitanje</label>
+                            <textarea class="note-area" rows="2" placeholder="Unesi pitanje za AI..."></textarea>
+                        </div>
+                        <div class="action-row">
+                            <button class="btn btn-outline btn-sm">Obriši</button>
+                            <button class="btn btn-primary btn-sm">Pošalji</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <aside class="right-sidebar">
+            <div class="widget ai-analiza">
+                <h3>AI Analiza</h3>
+                <div class="ai-analiza-card">
+                    <div class="ai-analiza-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2 2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <p>Predložene sekcije već popunjene iz prethodnih nalaza.</p>
+                    <button class="btn btn-primary btn-wide">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.35-4.35" />
+                        </svg>
+                        Otvori nacrt
+                    </button>
+                </div>
+            </div>
+            <div class="widget">
+                <h3>Filteri analize</h3>
+                <div class="mini-list">
+                    <label class="filter-item"><input type="checkbox" checked> Vitalni znaci</label>
+                    <label class="filter-item"><input type="checkbox" checked> Laboratorija</label>
+                    <label class="filter-item"><input type="checkbox"> Genetika</label>
+                </div>
+                <button class="btn btn-primary btn-sm action-block">Osvježi analizu</button>
+            </div>
+
+            <div class="widget">
+                <h3>Brze radnje</h3>
+                <div class="quick-actions">
+                    <button class="quick-action-btn">Kreiraj izvještaj</button>
+                    <button class="quick-action-btn">Pošalji u karton</button>
+                    <button class="quick-action-btn">Eksportuj PDF</button>
+                </div>
+            </div>
+
+            <div class="widget">
+                <h3>Napomena</h3>
+                <p class="sub-text">AI preporuke su pomoć; odluka je na ljekaru.</p>
+            </div>
+        </aside>
+    </main>
+</body>
+
+</html>
